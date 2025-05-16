@@ -105,6 +105,23 @@ main {
     background: #e67e22;
     margin: 15px auto;
 }
+.menu-title3{
+    
+    text-align: center;
+    font-size: 2.2rem;
+    color: #141414;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.menu-title3:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #e67e22;
+    margin: 15px auto;
+}
 
 /* فیلترهای منو */
 .filters {
@@ -120,7 +137,6 @@ main {
     border: 1px solid #e67e22;
     padding: 0.5rem 1.5rem;
     border-radius: 30px;
-    cursor: pointer;
     transition: all 0.3s;
     font-size: 1rem;
     color: #e67e22;
@@ -130,6 +146,36 @@ main {
 .filters button:hover {
     background-color: #e67e22;
     color: white;
+}
+.menu-title1{
+    
+    text-align: center;
+    font-size: 2.2rem;
+    color: #141414;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.menu-title1:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #e67e22;
+    margin: 15px auto;
+}
+
+.menu-title2:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #e67e22;
+    margin: 15px auto;
+}
+.category1{
+    margin-top: 20px;
+    
 }
 
 /* کارت‌های غذا */
@@ -160,7 +206,12 @@ main {
     width: 100%;
     height:150px;
     object-fit: cover;
+    transition: all 2s;
 
+}
+img:hover{
+    height: fit-content;
+    overflow: hidden;
 }
 
 .food-info {
@@ -199,8 +250,8 @@ main {
     padding: 0.5rem 1.2rem;
     transition: background-color 0.3s;
     font-size: 20px;
-    border-bottom-left-radius: 0 ;
-    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px;
 }
 
 .add-to-cart:hover {
