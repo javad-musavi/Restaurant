@@ -26,16 +26,18 @@ header {
     z-index: 1000;
 }
 
-.main-nav {
+.main-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 5%;
     max-width: 1200px;
     margin: 0 auto;
+    min-width: 300px;
+    flex-wrap: wrap;
 }
 
-.logo .image {
+.logoo .imagee {
     height: 40px;
     width: 200%;
     margin-top: -10%;
@@ -43,18 +45,18 @@ header {
 }
 
 
-.nav-links {
+.nav-linkss {
     display: flex;
     flex-direction: row;
     justify-content: center;
     list-style: none;
 }
 
-.nav-links li{
+.nav-linkss li{
     margin: 0 2.5rem;
     
 }
-.nav-links li a {
+.nav-linkss li a {
     text-decoration: none;
     color: #333;
     padding: 0.5rem 1rem;
@@ -63,12 +65,12 @@ header {
     border-radius: 30px;
 }
 
-.nav-links li a:hover,.nav-category.active {
+.nav-linkss li a:hover,.nav-categoryy.activee {
     background-color: #e67e22;
     border-radius: 30px;
     color:  rgba(255, 255, 255, 0.95);
 }
-.nav-buttons{
+.nav-buttonss{
     background-color: #e67e22;
     color: rgb(255, 255, 255);
     padding: 0.7rem 1.5rem;
@@ -77,10 +79,10 @@ header {
     font-weight: bold;
     transition: all 0.5s
 }
-.nav-buttons:hover {
+.nav-buttonss:hover {
     background-color: #d35400;
 }
-.order-btn{
+.order-btnn{
     text-decoration: none;
     color: #f9f9f9;
 }
@@ -90,7 +92,7 @@ main {
 }
 
 /* عنوان منو */
-.menu-title {
+.menu-titlee {
     text-align: center;
     font-size: 2.2rem;
     color: #e67e22;
@@ -98,7 +100,7 @@ main {
     position: relative;
 }
 
-.menu-title:after {
+.menu-titlee:after {
     content: '';
     display: block;
     width: 100px;
@@ -125,7 +127,7 @@ main {
 }
 
 /* فیلترهای منو */
-.filters {
+.filterss {
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -133,7 +135,7 @@ main {
     flex-wrap: wrap;
 }
 
-.filters button {
+.filterss button {
     background-color: #fff;
     border: 1px solid #e67e22;
     padding: 0.5rem 1.5rem;
@@ -143,8 +145,8 @@ main {
     color: #e67e22;
 }
 
-.filters button.active,
-.filters button:hover {
+.filterss button.active,
+.filterss button:hover {
     background-color: #e67e22;
     color: white;
 }
@@ -207,41 +209,44 @@ main {
 }
 
 /* کارت‌های غذا */
-.food-grid {
+.food-gridd {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 283px ;
     gap: 2rem;
     margin-top: 2rem;
 }
 
-.food-card {
+.food-cardd {
     background: rgb(255, 255, 255);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: all 2s;
+    transition: all 5s;
     display: flex;
     flex-direction: column;
     font-size: large;
 }
 
-.food-card:hover {
+.food-cardd:hover {
+    height: 450px;
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.food-card  img{
+.food-cardd  .imgg{
     width: 100%;
     height:150px;
     object-fit: cover;
-    transition: all ;
+    transition: all 2s;
 
 }
-img:hover{
+.imgg:hover{
     height: fit-content;
+    /* scale: 1.3; */
     overflow: hidden;
 }
-
+/* 
 .food-info {
     padding: 1.5rem;
 }
@@ -268,11 +273,11 @@ img:hover{
 
 .price {
     font-weight: bold;
-    color: #e67e22;
+    color: #e62222;
     font-size: 1.2rem;
-}
+} */
 
-.add-to-cart {
+.add-to-cartt {
     background-color: #e67e22;
     color: white;
     padding: 0.5rem 1.2rem;
@@ -282,12 +287,12 @@ img:hover{
     border-bottom-right-radius: 20px;
 }
 
-.add-to-cart:hover {
+.add-to-cartt:hover {
     background-color: #d35400;
 }
 
 /* بخش پیشنهاد ویژه */
-.special-offer {
+.special-offerr {
     margin: 4rem 0;
     background: linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.442)), url('../asscts/images/پیش.jpg');
     background-size: cover;
@@ -303,12 +308,12 @@ img:hover{
     height: 100px;
 }
 
-.special-offer h2 {
+.special-offerr h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
-.special-offer p {
+.special-offerr p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
 }
@@ -318,7 +323,7 @@ img:hover{
     margin-bottom: 1.5rem;
 }
 
-.old-price {
+.old-pricee {
     text-decoration: line-through;
     opacity: 0.7;
     margin-left: 1rem;
@@ -348,7 +353,7 @@ footer {
     padding: 3rem 5%;
 }
 
-.footer-content {
+.footer-contentt {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
@@ -356,13 +361,13 @@ footer {
     margin: 0 auto;
 }
 
-.footer-section h3 {
+.footer-sectionn h3 {
     color: #e67e22;
     margin-bottom: 1.5rem;
     font-size: 1.3rem;
 }
 
-.footer-section p, .footer-section a {
+.footer-sectionn p, .footer-sectionn a {
     color: #ddd;
     margin-bottom: 0.8rem;
     display: block;
@@ -370,17 +375,17 @@ footer {
     transition: color 0.3s;
 }
 
-.footer-section a:hover {
+.footer-sectionn a:hover {
     color: #e67e22;
 }
 
-.social-icons {
+.social-iconss {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-.social-icons a {
+.social-iconss a {
     color: white;
     background-color: #444;
     width: 40px;
@@ -392,7 +397,7 @@ footer {
     transition: all 0.3s;
 }
 
-.social-icons a:hover {
+.social-iconss a:hover {
     background-color: #e67e22;
     transform: translateY(-3px);
 }
@@ -407,10 +412,14 @@ footer {
 }
 
 /* رسپانسیو */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .main-nav {
-        flex-direction: column;
-        padding: 1rem;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        overflow: scroll;
     }
     
     .nav-links {

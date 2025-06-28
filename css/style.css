@@ -13,37 +13,24 @@
 
 body {
     background-color: #f9f9f9;
-    color: #333;
-    direction:rtl;
+    /* color: #ec0d0d; */
+    direction: rtl;
 }
 
 /* هدر و نویگیشن */
-header {
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
 
 .main-nav {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     padding: 0.5rem 5%;
 }
 
 .logo img {
     height: 40px;
-    width: 150%;
+    width: 100%;
     margin-top: -18%;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
 }
 
 .nav-links li a {
@@ -75,21 +62,18 @@ header {
 /* بخش هیرو */
 .hero-section {
     background:rgba(0, 0, 0, 0.6);
-    height: 100vh;
+    height: 585px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    padding-top: 80px;
-    display: flex;
     overflow: hidden;
 }
 .hero-section img{
     width:100%;
-    margin-top: -30%;
-    z-index: 0;
+    margin-top: -11%;
     
 }
 .hero-section::after {
@@ -98,7 +82,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: inherit;
     background: linear-gradient(to right, 
                 rgba(0, 0, 0, 0) 0%, 
                 rgba(0,0,0,0.6) 50%, 
@@ -135,7 +119,7 @@ margin-top: -60%;
 }
 
 .cta-btn:hover {
-    background-color: #0082d3c5;
+    background-color: #d30027c5;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
@@ -166,7 +150,7 @@ margin-top: -60%;
     border-radius: 50%;
 }
 
-.menu-categories {
+.menu-categoriess {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -188,30 +172,381 @@ margin-top: -60%;
     background-color: #e67e22;
     color: white;
 }
+/* --------------------------------------------------------------------- */
+/* index3 */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
-.footer{
-    width: 50%;
-    background: blue;
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-width: 300px;
+    flex-wrap: wrap;
+}
+
+
+
+.nav-links {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-links li{
+    margin: 0 2.5rem;
+    
+}
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    transition: color 0.5s;
+    border-radius: 30px;
+}
+
+.nav-links li a:hover,.active {
+    background-color: #e67e22;
+    border-radius: 30px;
+    color:  rgba(255, 255, 255, 0.95);
+}
+.nav-buttons{
+    margin-left: 40px;
+    background-color: #e67e22;
+    color: rgb(255, 255, 255);
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s
+    
+}
+.nav-buttons:hover {
+    background-color: #d35400;
+}
+
+/* عنوان منو */
+.menu-titlee {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #e67e22;
+    margin-top: 9%;
+    position: relative;
+    z-index: 0;
+}
+
+.menu-titlee:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #e67e22;
+    margin: 15px auto;
+    z-index: 0;
+}
+.menu-title3{
+    
+    text-align: center;
+    font-size: 2.2rem;
+    color: #141414;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 0;
+}
+
+.menu-title3:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #e67e22;
+    margin: 15px auto;
+    z-index: 0;
+}
+
+/* فیلترهای منو */
+.filterss {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filterss button {
+    background-color: #fff;
+    border: 1px solid #e67e22;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    transition: all 0.3s;
+    font-size: 1rem;
+    color: #e67e22;
+}
+
+.filterss button.active,
+.filterss button:hover {
+    background-color: #e67e22;
+    color: white;
+}
+.menu-title1{
+    
+    text-align: center;
+    font-size: 2.2rem;
+    color: #141414;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 0;
+}
+
+.menu-title1:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #e67e22;
+    margin: 15px auto;
+    z-index: 0;
+}
+
+.menu-title2:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #e67e22;
+    margin: 15px auto;
+    z-index: 0;
+}
+.menu-title3{
+    
+    text-align: center;
+    font-size: 2.2rem;
+    color: #141414;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 0;
+}
+
+.menu-title3:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #e67e22;
+    margin: 15px auto;
+    z-index: 0;
+}
+
+.menu-title4:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #e67e22;
+    margin: 15px auto;
+    z-index: 0;
+}
+
+.category1{
+    margin-top: 20px;
+    
+}
+
+/* کارت‌های غذا */
+.food-gridd {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    width: inherit;
+    
+}
+
+.food-cardd {
+    height: fit-content;
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 5s;
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    z-index: 1;
+}
+
+.food-cardd:hover {
+    height: fit-content;
+    transform: translateY(-20px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    z-index: 2;
+}
+.food-cardd h3,p,span{
+    margin-right: 9px;
+}
+.rating{
+    padding-right: 9px;
+}
+.food-cardd  .imgg{
+    width: 100%;
+    height:150px;
+    object-fit: cover;
+    transition: all 2s;
 
 }
-/* رسپانسیو */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .hamburger-menu {
-        display: block;
-    }
-    
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-    
-    .menu-categories {
-        flex-direction: column;
-        align-items: center;
-    }
+.imgg:hover{
+    height: fit-content;
+    overflow: hidden;
 }
+
+.add-to-cartt {
+    background-color: #e67e22;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.3s;
+    font-size: 20px;
+    border-bottom-left-radius: 20px ;
+    border-bottom-right-radius: 20px;
+}
+
+.add-to-cartt:hover {
+    background-color: #d35400;
+}
+
+/* بخش پیشنهاد ویژه */
+.special-offerr {
+    margin: 4rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.442)), url('../asscts/images/پیش.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    padding: 3rem;
+    color: white;
+    text-align: center;
+}
+
+
+.special-offerr h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.special-offerr p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.offer-price {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.old-pricee {
+    text-decoration: line-through;
+    opacity: 0.7;
+    margin-left: 1rem;
+}
+
+.order-now-btn {
+    background-color: white;
+    color: #e67e22;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.order-now-btn:hover {
+    background-color: #e67e22;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* فوتر */
+.footer {
+    background-color: #3d3b3b;
+    color: white;
+    padding: 3rem 5%;
+    width: 100%;
+    display: flex;
+    margin: -3% auto;
+    flex-direction: column;
+
+}
+
+.footer-contentt {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-sectionn h3 {
+    color: #e67e22;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.footer-sectionn p, .footer-sectionn a {
+    color: #ddd;
+    margin-bottom: 0.8rem;
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-sectionn a:hover {
+    color: #e67e22;
+}
+
+.social-iconss {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-iconss a {
+    color: white;
+    background-color: #444;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.social-iconss a:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #444;
+    color: #aaa;
+    font-size: 0.9rem;
+    background-color: #3d3b3b;
+    width: 100%;
+}
+/* ----------------------------------------------------------------------------------- */
+/* index 4 */
+
+
