@@ -32,6 +32,9 @@ body {
   color: var(--dark-color);
   direction: rtl;
   line-height: 1.6;
+ background-color: #f9f9f9;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e67d22' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 header {
   background-color: rgba(255, 255, 255, 0.98);
@@ -50,6 +53,11 @@ header {
   align-items: center;
   padding: 0.5rem 5%;
   gap: 10px;
+}
+.open{
+  display: none;
+  position: absolute;
+  z-index: 1;
 }
 .logo img {
   height: 40px;
@@ -361,14 +369,17 @@ header {
 .food-cardd {
   width: 300px;
   background: var(--bg-glass);
-  border-radius: 20px;
+  border-radius: 10px 20% 10px 20%;
   overflow: hidden;
   border: var(--border-glass);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
+  transition: var(--transition);
+
 }
 .food-cardd:hover{
   background-color: #e67d224b;
+  rotate: 10deg;
 }
 
 .food-cardd .imgg {
@@ -782,4 +793,195 @@ header {
 .menu-category.active {
   color: white;
   border-color: transparent;
+}
+@media (max-width: 1024px) {
+  /* تنظیمات هدر */
+  .main-nav {
+    padding: 0.5rem 3%;
+    gap: 5px;
+  }
+  
+  .nav-links {
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    font-size: 18px;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  /* تنظیمات بخش هیرو */
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+  
+  /* تنظیمات منو */
+  .food-gridd {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .food-cardd {
+    width: 100%;
+  }
+  
+  /* پیشنهاد ویژه */
+  .special-offerr {
+    padding: 3rem 1.5rem;
+  }
+  
+  .offer-details h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* تنظیمات خاص برای تبلت در حالت افقی */
+  .hero-content {
+    padding: 1.5rem;
+  }
+  
+  .food-gridd {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  /* هدر و نویگیشن */
+  .main-nav {
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem 5%;
+    height: fit-content;
+    position: sticky;
+    gap: 20%;
+    height: 80px;
+    overflow: hidden;
+  }
+  .open{
+  display: flex;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 1rem 0;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    text-align: end;
+  }
+  .main-nav .logo{
+    position: absolute;
+    left: 80%;
+    top: 23px;
+  }
+  
+  .nav-links li a {
+    font-size: 16px;
+    padding: 0.5rem;
+  }
+  
+  .nav-buttons {
+    padding: 0.5rem 1.5rem;
+    font-size: 16px;
+    position: absolute;
+    left: 120px;
+    top: 20px;
+  }
+  .imggg{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    scale: 1;
+  }
+  /* بخش هیرو */
+  .hero-section {
+    height: 80vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+  
+  /* منو و کارت‌ها */
+  .menu-section {
+    padding: 4rem 5%;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .food-gridd {
+    position: relative;
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .menu-categoriess {
+    gap: 0.5rem;
+  }
+  
+  .menu-category {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+  }
+  
+  /* پیشنهاد ویژه */
+  .special-offerr {
+    margin: 4rem auto;
+    padding: 2rem 1rem;
+    border-radius: 15px;
+  }
+  
+  .special-offerr h2 {
+    font-size: 2rem;
+  }
+  
+  .offer-cardd {
+    padding: 1.5rem;
+  }
+  
+  .offer-details h1 {
+    font-size: 1.5rem;
+  }
+  
+  .price-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  /* فوتر */
+  .footer-contentt {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-sectionn {
+    margin-bottom: 1.5rem;
+  }
 }
