@@ -3,56 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رستوران و فست فود | نام رستوران شما</title>
+    <title>ورود به رستوران | رستوران ما</title>
     <link rel="stylesheet" href="css/style.css">
-   
 </head>
 <body>
-    <header>
-        <nav class="main-nav" id="nav">
-            <div class="logo">
-                <img src="asscts/images/golden-retro-restaurant-logo-collection-Pre.jpg" alt="لوگوی رستوران">
+    <!-- لایه ثبت نام -->
+    <div class="login-container" id="registerContainer">
+        <div class="login-header">
+            <h1>ثبت نام در رستوران</h1>
+            <p>لطفاً اطلاعات خود را برای ثبت نام وارد کنید</p>
+        </div>
+        
+        <form id="registerForm" class="login-form">
+            <div class="form-group">
+                <label for="regName">نام و نام خانوادگی</label>
+                <input type="text" id="regName" placeholder="مثال: علی محمدی" required>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">صفحه اصلی</a></li>
-                <li><a href="#about">درباره ما</a></li>
-                <li><a href="#gallery">گالری</a></li>
-                <li><a href="#contact">تماس با ما</a></li>
-            </ul>
-            <div class="nav-buttons">
-                <a href="index2.html" class="order-btn">سفارش آنلاین</a>
+            
+            <div class="form-group">
+                <label for="regPhone">شماره تلفن</label>
+                <input type="tel" id="regPhone" placeholder="مثال: 09123456789" required>
+                <div id="phoneError" class="error-message hidden"></div>
             </div>
-            <h1 class="open" id="open">|||</h1>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero-section">
-            <img class="imggg" src="asscts/images/Jowhareh_galleries_6_poster_a30434a4-1473-471b-a6a6-fbfcdee7a00d.jpeg" alt="">
-            <div class="hero-content">
-                <h1>به رستوران [...] خوش آمدید</h1>
-                <p>طعمی به یاد ماندنی از غذاهای ایرانی و بین المللی</p>
-                <a href="#menu" class="cta-btn">مشاهده منو</a>
-            </div> 
-        </section>
-
-        <section id="menu" class="menu-section">
-            <h2 class="section-title">منوی رستوران</h2>
-            <div class="menu-categoriess">
-                <a href="index3.html" class="menu-category active">غذای ایرانی</a>
-                <a href="index4.html" class="menu-category">فست فود</a>
-                <a href="index5.html" class="menu-category">دسر</a>
-                <a href="index6.html" class="menu-category">صبحانه</a>
-                <a href="index7.html" class="menu-category">کترینگ</a>
+            
+            <div class="form-group">
+                <label for="regEmail">ایمیل (اختیاری)</label>
+                <input type="email" id="regEmail" placeholder="مثال: example@domain.com">
             </div>
+            
+            <button type="submit" class="submit-btn">ثبت نام و ورود</button>
+            <p style="text-align: center; margin-top: 15px;">قبلاً ثبت نام کرده‌اید؟ <a href="#loginContainer" id="showLogin">ورود به حساب کاربری</a></p>
+        </form>
+    </div>
 
-        </section>
+    <!-- لایه ورود -->
+    <div class="login-container hidden" id="loginContainer">
+        <div class="login-header">
+            <h1>ورود به رستوران</h1>
+            <p>لطفاً شماره تلفن خود را وارد کنید</p>
+        </div>
+        
+        <form id="loginForm" class="login-form">
+            <div class="form-group">
+                <label for="loginPhone">شماره تلفن</label>
+                <input type="tel" id="loginPhone" placeholder="مثال: 09123456789" required>
+                <div id="loginError" class="error-message hidden"></div>
+            </div>
+            
+            <button type="submit" class="submit-btn">ورود به منوی رستوران</button>
+            <button type="button" class="submit-btn secondary-btn" id="showRegister">ثبت نام جدید</button>
+        </form>
+    </div>
 
-        <!-- سایر سکشن ها -->
-    </main>
-
-    <footer>
-    </footer>
-    <script src="j,script/script.js"></script>
+    <!-- لایه خوش آمدگویی -->
+    <div class="login-container hidden" id="welcomeContainer">
+        <div class="login-header">
+            <h1>خوش آمدید!</h1>
+            <p id="welcomeMessage">به رستوران ما خوش آمدید</p>
+        </div>
+        <button type="button" class="submit-btn secondary-btn" id="logoutBtn">خروج</button>
+    </div>
+    <script src="j,script/script.js" ></script>
+    <script src="j,script/script2.js"></script>
 </body>
 </html>
