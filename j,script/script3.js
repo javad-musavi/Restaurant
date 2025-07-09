@@ -167,3 +167,13 @@ cartbackbtnn.addEventListener('click', function(e) {
     cartnav.style.display = 'none';
   }
 });
+
+// اضافه کردن event listener به document برای بستن cartnav هنگام کلیک خارج از آن
+document.addEventListener('click', function(e) {
+  // بررسی کنید که آیا کلیک روی cartbackbtnn یا cartnav بوده یا نه
+  const isClickInsideCart = cartnav.contains(e.target) || cartbackbtnn.contains(e.target);
+  
+  if (!isClickInsideCart && cartnav.style.display === 'flex') {
+    cartnav.style.display = 'none';
+  }
+});
