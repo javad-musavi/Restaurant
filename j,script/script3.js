@@ -156,3 +156,14 @@ function updateCartSummary() {
         totalElement.textContent = subtotal.toLocaleString('fa-IR') + ' تومان';
     }
 }
+const cartbackbtnn = document.getElementById('cart-back-btnn');
+const cartnav = document.querySelector('.hidencart'); 
+
+cartbackbtnn.addEventListener('click', function(e) {
+  e.preventDefault();
+  if (cartnav.style.display === 'none' || !cartnav.style.display) {
+    cartnav.style.display = 'flex';
+  } else {
+    cartnav.style.display = 'none';
+  }
+});
