@@ -156,24 +156,28 @@ function updateCartSummary() {
         totalElement.textContent = subtotal.toLocaleString('fa-IR') + ' تومان';
     }
 }
-const cartbackbtnn = document.getElementById('cart-back-btnn');
-const cartnav = document.querySelector('.hidencart'); 
+document.addEventListener('DOMContentLoaded',function () {
+    
 
-cartbackbtnn.addEventListener('click', function(e) {
-  e.preventDefault();
-  if (cartnav.style.display === 'none' || !cartnav.style.display) {
-    cartnav.style.display = 'flex';
-  } else {
-    cartnav.style.display = 'none';
-  }
-});
+    const cartbackbtnn = document.getElementById('cart-back-btnn');
+    const cartnavv = document.querySelector('.hidencart'); 
 
-// اضافه کردن event listener به document برای بستن cartnav هنگام کلیک خارج از آن
-document.addEventListener('click', function(e) {
-  // بررسی کنید که آیا کلیک روی cartbackbtnn یا cartnav بوده یا نه
-  const isClickInsideCart = cartnav.contains(e.target) || cartbackbtnn.contains(e.target);
-  
-  if (!isClickInsideCart && cartnav.style.display === 'flex') {
-    cartnav.style.display = 'none';
-  }
-});
+    cartbackbtnn.addEventListener('click', function(e) {
+    e.preventDefault();
+    if (cartnavv.style.display === 'none' || !cartnavv.style.display) {
+        cartnavv.style.display = 'flex';
+    } else {
+        cartnavv.style.display = 'none';
+    }
+    });
+
+    // اضافه کردن event listener به document برای بستن cartnav هنگام کلیک خارج از آن
+    document.addEventListener('click', function(e) {
+    // بررسی کنید که آیا کلیک روی cartbackbtnn یا cartnav بوده یا نه
+    const isClickInsideCart = cartnavv.contains(e.target) || cartbackbtnn.contains(e.target);
+    
+    if (!isClickInsideCart && cartnavv.style.display === 'flex') {
+        cartnavv.style.display = 'none';
+    }
+    });
+})
