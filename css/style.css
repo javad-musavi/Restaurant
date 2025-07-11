@@ -948,6 +948,7 @@ header {
   align-items: center;
   padding: 1rem 5%;
   position: relative;
+  height: 70px;
 }
 
 .cart-logo img {
@@ -988,19 +989,22 @@ header {
 }
 
 .cart-nav-buttons {
+  margin-left: 90px;
   display: flex;
   gap: 1rem;
 }
 
 .cart-back-btn {
+  width: fit-content;
   background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
   color: white;
-  padding: 0.7rem 1.5rem;
+  padding: 0.7rem 1.9rem;
   border-radius: 30px;
   font-weight: bold;
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(230, 126, 34, 0.3);
   transition: var(--transition);
+  /* font-size: larger; */
 }
 
 .cart-back-btn:hover {
@@ -1011,9 +1015,9 @@ header {
   flex-direction: column;
   width: 160px;
   height: 190px;
-  left: 100px;
-  top: 80px;
-  background-color:rgba(226, 226, 226, 0.977);
+  left: 150px;
+  top: 70px;
+  background-color:rgba(226, 226, 226, 0.683);
   position: absolute;
   gap: 5px;
   transition: all 1s;
